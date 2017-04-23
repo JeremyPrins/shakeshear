@@ -5,7 +5,7 @@ include_once "inlcludes/connection.php";
 
 // Parameters Last.fm call
 $user = "thementaldoctor";
-$apiKeyLastfm = "b5cf63047a0dfb6c847cb3a23dce9f34";
+$apiKeyLastfm = "xxx";
 $format = "json";
 $limit = 10;
 $extraInfo = 0;
@@ -106,7 +106,7 @@ foreach ($lastfmCallResultDecode['recenttracks']['track'] as $index => $item) {
 
 
 // Parameters Musixmatch call
-        $apiKeyMusixmatch = "127714d616b8ff66c2a79e0518535843";
+        $apiKeyMusixmatch = "xxx";
 
 //  Musixmatch call
         $urlMusixmatch = 'http://api.musixmatch.com/ws/1.1/track.search?apikey=' . $apiKeyMusixmatch . '&q_artist=' . $artistMusixmatch . '&q_track=' . $trackMusixmatch . '';
