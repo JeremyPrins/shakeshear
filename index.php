@@ -48,7 +48,7 @@ while ($row = $percentageChart->fetch_assoc()) {
                 <ul class="list-group">
                     <?php
                     // Call to last.fm
-                    $urlLastfm = 'http://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=thementaldoctor&api_key=b5cf63047a0dfb6c847cb3a23dce9f34&limit=10&format=json&extended=0';
+                    $urlLastfm = 'http://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=thementaldoctor&api_key=xxx&limit=10&format=json&extended=0';
                     $lastfmCallResult = file_get_contents($urlLastfm);
                     $lastfmCallResultDecode = json_decode($lastfmCallResult, true);
 
@@ -87,9 +87,8 @@ while ($row = $percentageChart->fetch_assoc()) {
                     $trackMusixmatch = $lastsong_name;
                     $artistMusixmatch = str_replace(' ', '%20', $artistMusixmatch);
                     $trackMusixmatch = str_replace(' ', '%20', $trackMusixmatch);
-
-
-                    $apiKeyMusixmatch = "127714d616b8ff66c2a79e0518535843";
+                    
+                    $apiKeyMusixmatch = "xxx";
                     $urlMusixmatch = 'http://api.musixmatch.com/ws/1.1/track.search?apikey=' . $apiKeyMusixmatch . '&q_artist=' . $artistMusixmatch . '&q_track=' . $trackMusixmatch . '';
                     $contentMusixmatch = file_get_contents($urlMusixmatch);
                     $musixmatchResponse = json_decode($contentMusixmatch, true);
